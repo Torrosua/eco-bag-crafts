@@ -16,6 +16,9 @@ import PricesPage from "./components/pages/PricesPage";
 import ArtworkRequirementsPage from "./components/pages/ArtworkRequirementsPage";
 import BagsLandingPage from "./components/pages/bags/BagsLandingPage";
 import KraftBagsWithHandlesPage from "./components/pages/bags/KraftBagsWithHandlesPage";
+import PaperTwinePage from "./components/pages/PaperTwinePage";
+import PaperBagsPage from "./components/pages/bags/PaperBagsPage";
+import LaminatedBagsPage from "./components/pages/bags/LaminatedBagsPage";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +42,12 @@ const App = () => {
         return <BagsLandingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'bags/kraft-bags-with-handles':
         return <KraftBagsWithHandlesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'bags/paper-bags':
+        return <PaperBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'bags/laminated-bags':
+        return <LaminatedBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'paper-twine':
+        return <PaperTwinePage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'prices':
         return <PricesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'artwork-requirements':
