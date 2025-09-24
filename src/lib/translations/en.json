@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "bags": "Bags",
+    "components": "Components",
+    "paperTwine": "Paper Twine",
+    "prices": "Prices",
+    "contacts": "Contacts",
+    "artworkRequirements": "Artwork Requirements",
+    "news": "News",
+    "tagline": "Factory of souvenirs, gifts and packaging"
+  },
+  "bags": {
+    "title": "Bags",
+    "paperBags": "Paper Bags",
+    "laminatedBags": "Laminated Bags",
+    "kraftBagsWithPrint": "Kraft Bags with Print",
+    "kraftBagsWithHandles": "Kraft Bags with Handles",
+    "clutchBags": "Clutch Bags",
+    "ecoCardboardBags": "Eco Cardboard Bags & Boxes"
+  },
+  "components": {
+    "title": "Components",
+    "paperHandles": "Paper Handles",
+    "handlesWithTips": "Handles with Tips (textile handles with PVC tips)",
+    "eyelets": "Eyelets for Bags"
+  },
+  "hero": {
+    "title": "Factory of souvenirs, gifts and packaging",
+    "subtitle": "Paper and laminated bags, paper twine, boxes, kraft and clutch bags",
+    "cta": "Contact Us",
+    "orderNow": "Order Now",
+    "getQuote": "Get Quote"
+  },
+  "about": {
+    "title": "About Our Company",
+    "subtitle": "Experience in eco-friendly packaging production",
+    "description": "We specialize in manufacturing high-quality paper packaging in Ukraine. Our products meet the highest standards of environmental friendliness and quality.",
+    "experience": "years experience",
+    "products": "product types",
+    "clients": "satisfied clients"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Wide range of paper packaging",
+    "paperBags": {
+      "title": "Custom Paper Bags",
+      "description": "High-quality paper bags with your logo"
+    },
+    "laminatedBags": {
+      "title": "Laminated Bags",
+      "description": "Durable laminated bags for various needs"
+    },
+    "clutchBags": {
+      "title": "Clutch Bags",
+      "description": "Stylish clutch bags for gifts"
+    },
+    "kraftBags": {
+      "title": "Kraft Bags with Logo",
+      "description": "Eco-friendly kraft bags with printing"
+    },
+    "kraftBagsWithHandles": {
+      "title": "Kraft Bags with Handles",
+      "description": "Eco-friendly kraft bags with strong handles",
+      "series": {
+        "standard": "Standard",
+        "ecoUkraine": "Eco-Ukraine",
+        "businessBrown": "Business – Brown",
+        "businessWhite": "Business – White"
+      }
+    },
+    "paperTwine": {
+      "title": "Paper Twine",
+      "description": "Natural paper twine for packaging"
+    },
+    "paperHandles": {
+      "title": "Paper Handles",
+      "description": "Durable handles for paper bags"
+    },
+    "ecoBoxes": {
+      "title": "Eco Cardboard Boxes",
+      "description": "Eco-friendly cardboard boxes in various sizes"
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Simple ordering process",
+    "step1": "Consultation",
+    "step1Desc": "We discuss your needs and requirements",
+    "step2": "Design",
+    "step2Desc": "We create a mockup according to your wishes",
+    "step3": "Production",
+    "step3Desc": "We manufacture products on modern equipment",
+    "step4": "Delivery",
+    "step4Desc": "We deliver finished products throughout Ukraine"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "7 Bratstva Tarasivtsiv St., office 212, Kyiv, Ukraine",
+    "formTitle": "Send a message",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send",
+    "consent": "I agree to the processing of personal data",
+    "submissionComingSoon": "Message submissions coming soon"
+  },
+  "prices": {
+    "title": "Prices",
+    "subtitle": "Price list for our products",
+    "downloadPriceList": "Download Price List (PDF)",
+    "lastUpdated": "Last updated: 25.09.2024"
+  },
+  "artworkRequirements": {
+    "title": "Artwork Requirements",
+    "subtitle": "Technical requirements for artwork preparation"
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Latest news and events from our company",
+    "readMore": "Read More",
+    "backToNews": "Back to News"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "backToHome": "Back to Home",
+    "downloadPDF": "Download PDF",
+    "ourWorks": "Our Works",
+    "specifications": "Specifications",
+    "minOrder": "Minimum Order",
+    "customPrinting": "Custom Printing",
+    "nationwideDelivery": "Nationwide Delivery"
+  }
+}
