@@ -1,0 +1,16 @@
+{
+  "company": {
+    "name": "PaperBag",
+    "phone": "+380 67 XXX XX XX",
+    "email": "info@paperbag.ua",
+    "address_uk": "м. Київ, вул. Прикладна, 1",
+    "address_en": "Kyiv, Prykladna St., 1",
+    "working_hours_uk": "Пн-Пт: 9:00-18:00",
+    "working_hours_en": "Mon-Fri: 9:00-18:00"
+  },
+  "seo": {
+    "site_title": "PaperBag - Eco-Friendly Paper Packaging Manufacturing | Ukraine",
+    "site_description": "Leading manufacturer of eco-friendly paper bags, laminated packaging, kraft bags and gift boxes in Ukraine. Custom printing, nationwide delivery, minimum 100 pcs orders.",
+    "keywords": "paper bags, laminated bags, kraft packaging, eco-friendly bags, custom printing, Ukraine packaging, gift boxes, paper twine, clutch bags"
+  }
+}

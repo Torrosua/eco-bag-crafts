@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Content Manager</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        load_config_file: false,
+        local_backend: true,
+        backend: {
+          name: 'github',
+          repo: window.location.hostname.includes('github.io') 
+            ? window.location.pathname.split('/')[1] + '/' + window.location.pathname.split('/')[1]
+            : 'your-username/your-repo', // User will need to update this
+          branch: 'main',
+          base_url: 'https://api.netlify.com',
+          auth_endpoint: 'auth'
+        },
+        media_folder: 'src/assets',
+        public_folder: '/src/assets',
+        collections: [
+          {
+            name: 'translations',
+            label: 'Переводы / Translations',
+            files: [
+              {
+                name: 'uk',
+                label: 'Українська',
+                file: 'src/lib/translations/uk.json',
+                fields: [
+                  {
+                    name: 'nav',
+                    label: 'Навігація',
+                    widget: 'object',
+                    fields: [
+                      { name: 'home', label: 'Головна', widget: 'string' },
+                      { name: 'products', label: 'Продукція', widget: 'string' },
+                      { name: 'bags', label: 'Пакети', widget: 'string' },
+                      { name: 'components', label: 'Комплектуючі', widget: 'string' },
+                      { name: 'paper_twine', label: 'Бумажний шпагат', widget: 'string' },
+                      { name: 'paper_cutting', label: 'Нарізка паперу', widget: 'string' },
+                      { name: 'prices', label: 'Ціни', widget: 'string' },
+                      { name: 'contacts', label: 'Контакти', widget: 'string' },
+                      { name: 'artwork_requirements', label: 'Вимоги до макетів', widget: 'string' },
+                      { name: 'news', label: 'Новини', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'hero',
+                    label: 'Головна секція',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Заголовок', widget: 'string' },
+                      { name: 'subtitle', label: 'Підзаголовок', widget: 'text' },
+                      { name: 'cta', label: 'Кнопка CTA', widget: 'string' },
+                      { name: 'phone', label: 'Телефон', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'about',
+                    label: 'Про компанію',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Заголовок', widget: 'string' },
+                      { name: 'description', label: 'Опис', widget: 'text' },
+                      { name: 'experience', label: 'Досвід роботи', widget: 'string' },
+                      { name: 'orders_completed', label: 'Замовлень виконано', widget: 'string' },
+                      { name: 'happy_clients', label: 'Задоволених клієнтів', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'contact',
+                    label: 'Контакти',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Заголовок', widget: 'string' },
+                      { name: 'phone', label: 'Телефон', widget: 'string' },
+                      { name: 'email', label: 'Email', widget: 'string' },
+                      { name: 'address', label: 'Адреса', widget: 'string' },
+                      { name: 'working_hours', label: 'Робочі години', widget: 'string' }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'en',
+                label: 'English',
+                file: 'src/lib/translations/en.json',
+                fields: [
+                  {
+                    name: 'nav',
+                    label: 'Navigation',
+                    widget: 'object',
+                    fields: [
+                      { name: 'home', label: 'Home', widget: 'string' },
+                      { name: 'products', label: 'Products', widget: 'string' },
+                      { name: 'bags', label: 'Bags', widget: 'string' },
+                      { name: 'components', label: 'Components', widget: 'string' },
+                      { name: 'paper_twine', label: 'Paper Twine', widget: 'string' },
+                      { name: 'paper_cutting', label: 'Paper Cutting', widget: 'string' },
+                      { name: 'prices', label: 'Prices', widget: 'string' },
+                      { name: 'contacts', label: 'Contacts', widget: 'string' },
+                      { name: 'artwork_requirements', label: 'Artwork Requirements', widget: 'string' },
+                      { name: 'news', label: 'News', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'hero',
+                    label: 'Hero Section',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Title', widget: 'string' },
+                      { name: 'subtitle', label: 'Subtitle', widget: 'text' },
+                      { name: 'cta', label: 'CTA Button', widget: 'string' },
+                      { name: 'phone', label: 'Phone', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'about',
+                    label: 'About Company',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Title', widget: 'string' },
+                      { name: 'description', label: 'Description', widget: 'text' },
+                      { name: 'experience', label: 'Experience', widget: 'string' },
+                      { name: 'orders_completed', label: 'Orders Completed', widget: 'string' },
+                      { name: 'happy_clients', label: 'Happy Clients', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'contact',
+                    label: 'Contact',
+                    widget: 'object',
+                    fields: [
+                      { name: 'title', label: 'Title', widget: 'string' },
+                      { name: 'phone', label: 'Phone', widget: 'string' },
+                      { name: 'email', label: 'Email', widget: 'string' },
+                      { name: 'address', label: 'Address', widget: 'string' },
+                      { name: 'working_hours', label: 'Working Hours', widget: 'string' }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'pages',
+            label: 'Сторінки / Pages',
+            folder: 'content/pages',
+            create: true,
+            slug: '{{slug}}',
+            fields: [
+              { name: 'title', label: 'Заголовок / Title', widget: 'string' },
+              { name: 'description', label: 'Опис / Description', widget: 'text' },
+              { name: 'lang', label: 'Мова / Language', widget: 'select', options: ['uk', 'en'] },
+              { name: 'category', label: 'Категорія / Category', widget: 'select', options: ['bags', 'components', 'paper-twine', 'paper-cutting'] },
+              { name: 'image', label: 'Зображення / Image', widget: 'image', required: false },
+              { name: 'content', label: 'Контент / Content', widget: 'markdown' },
+              { name: 'seo_title', label: 'SEO Title', widget: 'string', required: false },
+              { name: 'seo_description', label: 'SEO Description', widget: 'text', required: false }
+            ]
+          },
+          {
+            name: 'news',
+            label: 'Новини / News',
+            folder: 'content/news',
+            create: true,
+            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+            fields: [
+              { name: 'title', label: 'Заголовок / Title', widget: 'string' },
+              { name: 'date', label: 'Дата / Date', widget: 'datetime' },
+              { name: 'excerpt', label: 'Короткий опис / Excerpt', widget: 'text' },
+              { name: 'lang', label: 'Мова / Language', widget: 'select', options: ['uk', 'en'] },
+              { name: 'image', label: 'Зображення / Image', widget: 'image', required: false },
+              { name: 'content', label: 'Контент / Content', widget: 'markdown' },
+              { name: 'seo_title', label: 'SEO Title', widget: 'string', required: false },
+              { name: 'seo_description', label: 'SEO Description', widget: 'text', required: false }
+            ]
+          },
+          {
+            name: 'settings',
+            label: 'Налаштування / Settings',
+            files: [
+              {
+                name: 'site',
+                label: 'Налаштування сайту / Site Settings',
+                file: 'content/settings/site.json',
+                fields: [
+                  {
+                    name: 'company',
+                    label: 'Інформація про компанію / Company Info',
+                    widget: 'object',
+                    fields: [
+                      { name: 'name', label: 'Назва компанії / Company Name', widget: 'string' },
+                      { name: 'phone', label: 'Телефон / Phone', widget: 'string' },
+                      { name: 'email', label: 'Email', widget: 'string' },
+                      { name: 'address_uk', label: 'Адреса (УКР) / Address (UK)', widget: 'text' },
+                      { name: 'address_en', label: 'Адреса (EN) / Address (EN)', widget: 'text' },
+                      { name: 'working_hours_uk', label: 'Робочі години (УКР)', widget: 'string' },
+                      { name: 'working_hours_en', label: 'Робочі години (EN)', widget: 'string' }
+                    ]
+                  },
+                  {
+                    name: 'seo',
+                    label: 'SEO налаштування / SEO Settings',
+                    widget: 'object',
+                    fields: [
+                      { name: 'site_title', label: 'Заголовок сайту / Site Title', widget: 'string' },
+                      { name: 'site_description', label: 'Опис сайту / Site Description', widget: 'text' },
+                      { name: 'keywords', label: 'Ключові слова / Keywords', widget: 'string' }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

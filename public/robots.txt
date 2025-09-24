@@ -13,4 +13,7 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Disallow admin area
+Disallow: /admin/
+
 Sitemap: https://paperbag.lovable.app/sitemap.xml
