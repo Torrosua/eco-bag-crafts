@@ -17,6 +17,8 @@ export default defineConfig(({ mode }) => ({
       hostname: 'https://paperbag.lovable.app',
       dynamicRoutes: [
         '/',
+        '/about',
+        '/products',
         '/bags',
         '/bags/paper-bags',
         '/bags/laminated-bags',
@@ -29,9 +31,11 @@ export default defineConfig(({ mode }) => ({
         '/components/handles-with-tips',
         '/components/eyelets',
         '/paper-twine',
+        '/paper-cutting',
         '/prices',
         '/contacts',
         '/artwork-requirements',
+        '/how-we-work',
         '/news'
       ]
     })

@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Leaf, Clock } from 'lucide-react';
 import { translations } from '@/lib/translations';
+import SEOHead from '@/components/SEOHead';
 
 interface AboutPageProps {
   currentLang: 'uk' | 'en';
@@ -55,7 +56,16 @@ const AboutPage = ({ currentLang }: AboutPageProps) => {
   ];
 
   return (
-    <div className="min-h-screen py-12">
+    <>
+      <SEOHead 
+        title={currentLang === 'uk' ? 'Про нас' : 'About Us'}
+        description={currentLang === 'uk' 
+          ? 'Дізнайтеся більше про нашу компанію - провідного виробника екологічної паперової упаковки в Україні. Наш досвід, можливості та переваги.'
+          : 'Learn more about our company - a leading manufacturer of eco-friendly paper packaging in Ukraine. Our experience, capabilities and advantages.'
+        }
+        canonical="https://paperbag.lovable.app/about"
+      />
+      <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -141,7 +151,8 @@ const AboutPage = ({ currentLang }: AboutPageProps) => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

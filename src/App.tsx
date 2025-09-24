@@ -6,27 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import HomePage from "./components/pages/HomePage";
-import AboutPage from "./components/pages/AboutPage";
-import ProductsPage from "./components/pages/ProductsPage";
-import HowWeWorkPage from "./components/pages/HowWeWorkPage";
-import BlogPage from "./components/pages/BlogPage";
-import ContactPage from "./components/pages/ContactPage";
-import PricesPage from "./components/pages/PricesPage";
-import ArtworkRequirementsPage from "./components/pages/ArtworkRequirementsPage";
-import BagsLandingPage from "./components/pages/bags/BagsLandingPage";
-import KraftBagsWithHandlesPage from "./components/pages/bags/KraftBagsWithHandlesPage";
-import PaperTwinePage from "./components/pages/PaperTwinePage";
-import PaperCuttingPage from "./components/pages/PaperCuttingPage";
-import PaperBagsPage from "./components/pages/bags/PaperBagsPage";
-import LaminatedBagsPage from "./components/pages/bags/LaminatedBagsPage";
-import ClutchBagsPage from "./components/pages/bags/ClutchBagsPage";
-import KraftBagsWithPrintPage from "./components/pages/bags/KraftBagsWithPrintPage";
-import EcoCardboardBagsPage from "./components/pages/bags/EcoCardboardBagsPage";
-import ComponentsLandingPage from "./components/pages/components/ComponentsLandingPage";
-import PaperHandlesPage from "./components/pages/components/PaperHandlesPage";
-import HandlesWithTipsPage from "./components/pages/components/HandlesWithTipsPage";
-import EyeletsPage from "./components/pages/components/EyeletsPage";
+import Router from "./Router";
 
 const queryClient = new QueryClient();
 
@@ -38,55 +18,6 @@ const App = () => {
   const handleLanguageChange = (lang: 'uk' | 'en') => {
     setCurrentLang(lang);
     i18n.changeLanguage(lang);
-  };
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'about':
-        return <AboutPage currentLang={currentLang} />;
-      case 'products':
-        return <ProductsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags':
-        return <BagsLandingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/kraft-bags-with-handles':
-        return <KraftBagsWithHandlesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/paper-bags':
-        return <PaperBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/laminated-bags':
-        return <LaminatedBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/clutch-bags':
-        return <ClutchBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/kraft-bags-with-print':
-        return <KraftBagsWithPrintPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'bags/eco-cardboard-bags':
-        return <EcoCardboardBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'components':
-        return <ComponentsLandingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'components/paper-handles':
-        return <PaperHandlesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'components/handles-with-tips':
-        return <HandlesWithTipsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'components/eyelets':
-        return <EyeletsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'paper-twine':
-        return <PaperTwinePage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'paper-cutting':
-        return <PaperCuttingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'prices':
-        return <PricesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'artwork-requirements':
-        return <ArtworkRequirementsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'how-we-work':
-        return <HowWeWorkPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'blog':
-      case 'news':
-        return <BlogPage currentLang={currentLang} onPageChange={setCurrentPage} />;
-      case 'contact':
-      case 'contacts':
-        return <ContactPage currentLang={currentLang} />;
-      default:
-        return <HomePage currentLang={currentLang} onPageChange={setCurrentPage} />;
-    }
   };
 
   return (
@@ -102,7 +33,7 @@ const App = () => {
             onLanguageChange={handleLanguageChange}
           />
           <main className="flex-1">
-            {renderPage()}
+            <Router currentLang={currentLang} onPageChange={setCurrentPage} />
           </main>
           <Footer 
             currentLang={currentLang}

@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Leaf, Award, Truck } from 'lucide-react';
 import { translations } from '@/lib/translations';
 import heroImage from '@/assets/hero-bags.jpg';
+import SEOHead from '@/components/SEOHead';
 
 interface HomePageProps {
   currentLang: 'uk' | 'en';
@@ -37,7 +38,16 @@ const HomePage = ({ currentLang, onPageChange }: HomePageProps) => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEOHead 
+        title={currentLang === 'uk' ? 'Головна' : 'Home'}
+        description={currentLang === 'uk' 
+          ? 'Провідний виробник екологічної паперової упаковки в Україні. Паперові пакети, ламіновані пакети, крафт упаковка. Мінімальне замовлення 100 шт.'
+          : 'Leading manufacturer of eco-friendly paper bags, laminated packaging, kraft bags and gift boxes in Ukraine. Custom printing, nationwide delivery, minimum 100 pcs orders.'
+        }
+        canonical="https://paperbag.lovable.app/"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 kraft-texture overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
@@ -159,7 +169,8 @@ const HomePage = ({ currentLang, onPageChange }: HomePageProps) => {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
