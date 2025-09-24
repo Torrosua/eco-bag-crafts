@@ -19,6 +19,13 @@ import KraftBagsWithHandlesPage from "./components/pages/bags/KraftBagsWithHandl
 import PaperTwinePage from "./components/pages/PaperTwinePage";
 import PaperBagsPage from "./components/pages/bags/PaperBagsPage";
 import LaminatedBagsPage from "./components/pages/bags/LaminatedBagsPage";
+import ClutchBagsPage from "./components/pages/bags/ClutchBagsPage";
+import KraftBagsWithPrintPage from "./components/pages/bags/KraftBagsWithPrintPage";
+import EcoCardboardBagsPage from "./components/pages/bags/EcoCardboardBagsPage";
+import ComponentsLandingPage from "./components/pages/components/ComponentsLandingPage";
+import PaperHandlesPage from "./components/pages/components/PaperHandlesPage";
+import HandlesWithTipsPage from "./components/pages/components/HandlesWithTipsPage";
+import EyeletsPage from "./components/pages/components/EyeletsPage";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +53,20 @@ const App = () => {
         return <PaperBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'bags/laminated-bags':
         return <LaminatedBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'bags/clutch-bags':
+        return <ClutchBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'bags/kraft-bags-with-print':
+        return <KraftBagsWithPrintPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'bags/eco-cardboard-bags':
+        return <EcoCardboardBagsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'components':
+        return <ComponentsLandingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'components/paper-handles':
+        return <PaperHandlesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'components/handles-with-tips':
+        return <HandlesWithTipsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'components/eyelets':
+        return <EyeletsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'paper-twine':
         return <PaperTwinePage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'prices':
