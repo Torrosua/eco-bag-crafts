@@ -106,7 +106,12 @@
     "message": "Message",
     "send": "Send",
     "consent": "I agree to the processing of personal data",
-    "submissionComingSoon": "Message submissions coming soon"
+    "submissionComingSoon": "Message submissions coming soon",
+    "company": "Factory of souvenirs, gifts and packaging",
+    "questions": "Have questions?",
+    "orderBags": "Want to order paper bags?",
+    "callOrFill": "Call us or fill out the contact form:",
+    "managers": "Managers:"
   },
   "prices": {
     "title": "Prices",
@@ -133,6 +138,13 @@
     "specifications": "Specifications",
     "minOrder": "Minimum Order",
     "customPrinting": "Custom Printing",
-    "nationwideDelivery": "Nationwide Delivery"
+    "nationwideDelivery": "Nationwide Delivery",
+    "company": "Company",
+    "learnMore": "Learn More",
+    "durable": "Durable",
+    "stylish": "Stylish",
+    "ecoFriendly": "Eco-Friendly",
+    "qualityGuarantee": "Quality Guarantee",
+    "allRightsReserved": "All rights reserved"
   }
 }
