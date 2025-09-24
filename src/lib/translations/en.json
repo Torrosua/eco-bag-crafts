@@ -1,14 +1,19 @@
 {
   "nav": {
     "home": "Home",
+    "products": "Products",
     "bags": "Bags",
     "components": "Components",
-    "paperTwine": "Paper Twine",
+    "paperTwine": "Paper Twine", 
+    "paperCutting": "Paper Cutting",
     "prices": "Prices",
     "contacts": "Contacts",
     "artworkRequirements": "Artwork Requirements",
     "news": "News",
-    "tagline": "Factory of souvenirs, gifts and packaging"
+    "tagline": "Factory of souvenirs, gifts and packaging",
+    "about": "About",
+    "howWeWork": "How We Work",
+    "blog": "Blog"
   },
   "bags": {
     "title": "Bags",
@@ -80,6 +85,10 @@
     "ecoBoxes": {
       "title": "Eco Cardboard Boxes",
       "description": "Eco-friendly cardboard boxes in various sizes"
+    },
+    "paperCutting": {
+      "title": "Paper Cutting",
+      "description": "Professional paper cutting services in various formats and types"
     }
   },
   "howWeWork": {

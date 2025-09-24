@@ -17,6 +17,7 @@ import ArtworkRequirementsPage from "./components/pages/ArtworkRequirementsPage"
 import BagsLandingPage from "./components/pages/bags/BagsLandingPage";
 import KraftBagsWithHandlesPage from "./components/pages/bags/KraftBagsWithHandlesPage";
 import PaperTwinePage from "./components/pages/PaperTwinePage";
+import PaperCuttingPage from "./components/pages/PaperCuttingPage";
 import PaperBagsPage from "./components/pages/bags/PaperBagsPage";
 import LaminatedBagsPage from "./components/pages/bags/LaminatedBagsPage";
 import ClutchBagsPage from "./components/pages/bags/ClutchBagsPage";
@@ -69,6 +70,8 @@ const App = () => {
         return <EyeletsPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'paper-twine':
         return <PaperTwinePage currentLang={currentLang} onPageChange={setCurrentPage} />;
+      case 'paper-cutting':
+        return <PaperCuttingPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'prices':
         return <PricesPage currentLang={currentLang} onPageChange={setCurrentPage} />;
       case 'artwork-requirements':
